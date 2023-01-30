@@ -1,0 +1,17 @@
+hry love yur@
+file, err := os.Open("text.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+	data, err := ioutil.ReadAll(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("data in that pkg %#v %d\n", string(data), len(data))
+
+	data1, err1 := ioutil.ReadFile("write_file.go")
+	if err1 != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("data in that pkg %s %d\n", data1, len(data1))
